@@ -9,18 +9,22 @@
         <tr>
           <td>
             <form>
-              <script "language="javascript""> = $0
-                function width(m, x){return m*0.00039/x}
+              <script>
+                function widthCalc{
+                  m = document.forms[0].m.value;
+                  x = document.forms[0].x.value;
+                  document.forms[0].b.vslue = m*0.00039/x;
+                }
               </script>
               <p>
                 Ievadiet maksimums numuru:
-                <input type="text" name="m" onchange="m=document.forms[0].m.value;fv=document.forms[0];x=fv.x.value;fv.b.value=width(m,x)">
+                <input type="text" name="m" value onchange="widthCalc()">
                 <br>
                 Ievadiet distanci no maksimuma līdz centram [mm/rūtiņas]:
-                <input type="text" name="x" onchange="x=document.forms[0].x.value;fv=document.forms[0];m=fv.m.value;fv.b.value=width(m,x)">
+                <input type="text" name="x" value onchange="widthCalc()">
                 <br>
                 Jūsu mata biezums:
-                <input type="text" name="b" onchange="fv=document.forms[0];x=fv.x.value;m=fv.m.value;fv.b.value=width(m,x)">
+                <input type="text" name="b" value onchange="widthCalc()">
               </p>
             </form>
           </td>
