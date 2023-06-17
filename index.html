@@ -11,20 +11,21 @@
             <form>
               <script>
                 function widthCalc{
-                  m = document.forms[0].m.value;
-                  x = document.forms[0].x.value;
-                  document.forms[0].b.vslue = m*0.00039/x;
+                  m = document.forms[0].mv.value;
+                  x = document.forms[0].xv.value;
+                  b = m*0.00039/x;
+                  document.getElementById("width").innerHTML = b;
                 }
               </script>
               <p>
                 Ievadiet maksimums numuru:
-                <input type="text" name="m" value onchange="widthCalc()">
+                <input type="text" name="mv" value onchange="widthCalc()">
                 <br>
                 Ievadiet distanci no maksimuma līdz centram [mm/rūtiņas]:
-                <input type="text" name="x" value onchange="widthCalc()">
+                <input type="text" name="xv" value onchange="widthCalc()">
                 <br>
                 Jūsu mata biezums:
-                <input type="text" name="b" value onchange="widthCalc()">
+                <p id="width"></p>
               </p>
             </form>
           </td>
