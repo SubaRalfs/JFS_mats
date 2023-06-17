@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mata biezums</title>
   </head>
   <body>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <form>
-              <p>
-                Ievadiet maksimums numuru:
-                <br>
-                <input type="number" name="mv" onchange="widthCalc()">
-                <br>
-                <br>
-                Ievadiet distanci no maksimuma līdz centram [mm/rūtiņas]:
-                <br>
-                <input type="number" name="xv" onchange="widthCalc()">
-                <br>
-                <br>
-                Jūsu mata biezums:
-                <p id="width"></p>
-              </p>
-              <script>
-                function widthCalc() {
-                  m = document.forms[0].mv.value;
-                  x = document.forms[0].xv.value;
-                  b = m*0.00039/x;
-                  document.getElementById("width").innerHTML = b;
-                }
-              </script>
-            </form>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+    <h1 style="font-size:10vw;">Mata platuma aprēķins</h1>
+
+    <form>
+      <p style="font-size:5vw;">
+        Ievadiet maksimums numuru:
+        <br>
+        <input type="number" name="mv" onchange="widthCalc()" style="font-size:5vw;">
+        <br>
+        <br>
+        Ievadiet distanci no maksimuma līdz centram [mm/rūtiņas]:
+        <br>
+        <input type="number" name="xv" onchange="widthCalc()" style="font-size:5vw;">
+        <br>
+        <br>
+        Jūsu mata biezums:
+        <p id="width" style="font-size:5vw;"></p>
+      </p>
+      <script>
+        function widthCalc() {
+          m = document.forms[0].mv.value;
+          x = document.forms[0].xv.value;
+          b = m*0.00039/x;
+          document.getElementById("width").innerHTML = b;
+        }
+      </script>
+    </form>
+
   </body>
   
 </html>
