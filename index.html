@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Mata biezums</title>
@@ -9,14 +10,6 @@
         <tr>
           <td>
             <form>
-              <script>
-                function widthCalc{
-                  m = document.forms[0].mv.value;
-                  x = document.forms[0].xv.value;
-                  b = m*0.00039/x;
-                  document.getElementById("width").innerHTML = b;
-                }
-              </script>
               <p>
                 Ievadiet maksimums numuru:
                 <input type="text" name="mv" onchange="widthCalc()">
@@ -27,6 +20,14 @@
                 Jūsu mata biezums:
                 <p id="width"></p>
               </p>
+              <script>
+                function widthCalc{
+                  m = document.forms[0].mv.value;
+                  x = document.forms[0].xv.value;
+                  b = m*0.00039/x;
+                  document.getElementById("width").innerHTML = b;
+                }
+              </script>
             </form>
           </td>
         </tr>
