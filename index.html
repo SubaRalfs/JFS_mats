@@ -1,4 +1,4 @@
-<html>
+t<html>
   <head>
     <title>Mata biezums</title>
   </head>
@@ -14,12 +14,13 @@
               </script>
               <p>
                 Ievadiet maksimums numuru:
-                <input type="number" name="m" onchange="">
+                <input type="number" name="m" onchange="m=document.forms[0].m.value;fv=document.forms[0];x=fv.x.value;fv.b.value=width(m,x)">
                 <br>
                 Ievadiet distanci no maksimuma līdz centram [mm/rūtiņas]:
-                <input type="number" name="x" onchange="">
+                <input type="number" name="x" onchange="x=document.forms[0].x.value;fv=document.forms[0];m=fv.m.value;fv.b.value=width(m,x)">
                 <br>
-                Jūsu mata biezums
+                Jūsu mata biezums:
+                <input type="number" name="b">
               </p>
             </form>
           </td>
