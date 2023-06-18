@@ -10,7 +10,7 @@
 
     <form>
       <p style="font-size:5vw;">
-        Ievadiet maksimums numuru:
+        Ievadiet maksimuma numuru:
         <br>
         <input type="number" name="mv" onchange="widthCalc()" style="font-size:5vw;">
         <br>
@@ -27,7 +27,7 @@
         function widthCalc() {
           m = document.forms[0].mv.value;
           x = document.forms[0].xv.value;
-          b = m*0.00039/x;
+          b = m*390/x;
           document.getElementById("width").innerHTML = b;
         }
       </script>
