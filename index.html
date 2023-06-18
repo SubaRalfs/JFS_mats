@@ -12,16 +12,22 @@
       <p style="font-size:5vw;">
         Ievadiet maksimuma numuru:
         <br>
-        <input type="number" name="mv" onchange="widthCalc()" style="font-size:5vw;">
+        <input type="text" name="mv" onchange="widthCalc()" style="font-size:5vw;">
         <br>
         <br>
-        Ievadiet distanci no maksimuma līdz centram [mm/rūtiņas]:
+        Ievadiet distanci no maksimuma līdz centram [mm]:
         <br>
-        <input type="number" name="xv" onchange="widthCalc()" style="font-size:5vw;">
+        <input type="text" name="xv" onchange="widthCalc()" style="font-size:5vw;">
         <br>
         <br>
-        Jūsu mata biezums [μm]:
+        Jūsu mata platums [μm]:
+        <p>
         <p id="width" style="font-size:5vw;"></p>
+        <br>
+        <br>
+        <p style="font-size:5vw;">
+        <em>1 [μm] = 0.0001 [cm]</em>
+        </p>
       </p>
       <script>
         function widthCalc() {
