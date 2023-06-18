@@ -6,26 +6,26 @@
   </head>
   <body bgcolor="FFE4C8">
 
-    <h1 style="font-size:10vw;">Mata platuma aprēķins</h1>
+    <h1 style="font-size:8vw;">Mata platuma aprēķins</h1>
 
     <form>
-      <p style="font-size:5vw;">
+      <p style="font-size:4vw;">
         Ievadiet maksimuma numuru:
         <br>
-        <input type="text" name="mv" onchange="widthCalc()" style="font-size:5vw;">
+        <input type="text" name="mv" onchange="widthCalc()" style="font-size:4vw;">
         <br>
         <br>
         Ievadiet distanci no maksimuma līdz centram [mm]:
         <br>
-        <input type="text" name="xv" onchange="widthCalc()" style="font-size:5vw;">
+        <input type="text" name="xv" onchange="widthCalc()" style="font-size:4vw;">
         <br>
         <br>
-        Jūsu mata platums [μm]:
+        Jūsu mata platums:
         <p>
-        <p id="width" style="font-size:5vw;"></p>
+        <p id="width" style="font-size:4vw;">0 [μm]</p>
         <br>
         <br>
-        <p style="font-size:5vw;">
+        <p style="font-size:4vw;">
         <em>1 [μm] = 0.0001 [cm]</em>
         </p>
       </p>
@@ -33,7 +33,13 @@
         function widthCalc() {
           m = document.forms[0].mv.value;
           x = document.forms[0].xv.value;
-          b = m*390/x;
+          
+          if (x!=0){
+            b = m*390/x + " [μm]";
+          }
+          else{
+            b = 0 + " [μm]";
+          }
           document.getElementById("width").innerHTML = b;
         }
       </script>
