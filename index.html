@@ -38,7 +38,7 @@
           let x = document.forms[0].xv.value;
           let b;
           
-          x ? b = m*390/x : b = 0 ;
+          x ? b = Math.round(m*390/x) : b = 0 ;
           
           document.getElementById("width").innerHTML = b;
         }
