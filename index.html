@@ -22,8 +22,9 @@
         <br>
         <table>
           <tr>
-            <td><p style="font-size:4vw;">Jūsu mata platums:</p></td>
-            <td><p id="width" style="font-size:4vw;">0 [μm]</p></td>
+            <td><p style="font-size:4vw;">Jūsu mata platums: </p></td>
+            <td><p id="width" style="font-size:4vw;">0</p></td>
+            <td> [μm]</td>
           </tr>
         </table>
         <br>
@@ -37,7 +38,7 @@
           let x = document.forms[0].xv.value;
           let b;
           
-          x ? b = m*390/x + " [μm]" : b = 0 + " [μm]";
+          x ? b = m*390/x : b = 0 ;
           
           document.getElementById("width").innerHTML = b;
         }
