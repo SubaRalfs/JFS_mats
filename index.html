@@ -37,11 +37,8 @@
           let x = document.forms[0].xv.value;
           let b;
           
-          if (x){
-            b = m*390/x + " [μm]";
-          } else {
-            b = 0 + " [μm]";
-          }
+          x ? b = m*390/x + " [μm]" : b = 0 + " [μm]";
+          
           document.getElementById("width").innerHTML = b;
         }
       </script>
