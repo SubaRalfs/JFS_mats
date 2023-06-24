@@ -33,14 +33,14 @@
       </p>
       <script>
         function widthCalc() {
-          m = document.forms[0].mv.value;
-          x = document.forms[0].xv.value;
+          const m = document.forms[0].mv.value;
+          const x = document.forms[0].xv.value;
           
-          if (x!=0){
-            b = m*390/x + " [μm]";
+          if (x){
+            const b = m*390/x + " [μm]";
           }
           else{
-            b = 0 + " [μm]";
+            const b = 0 + " [μm]";
           }
           document.getElementById("width").innerHTML = b;
         }
