@@ -34,11 +34,13 @@
       </p>
       <script>
         function widthCalc() {
-          let m = document.forms[0].mv.value;
-          let x = document.forms[0].xv.value;
+          let m = document.forms[0].mv.value; //Maksimuma numurs
+          let x = document.forms[0].xv.value; //Maksimuma attālums (mm)
+          let l = 0.75; //Stobra garums (m)
+          let lambda = 650; //Lāzera viļņa garums (nm)
           let b;
           
-          x ? b = Math.round(m*390/x) : b = 0 ;
+          x ? b = Math.round(m*l*lambda/x) : b = 0 ; // Mata biezums (μm)
           
           document.getElementById("width").innerHTML = b;
         }
